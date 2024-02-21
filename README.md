@@ -12,3 +12,7 @@ Sharpshooter Arena Central Website.
 9. npm i react-reveal --save --force
 10. npm i react-icons --save --force
 11. Home Screen UI Completed.
+12. Fix Hamburger menu
+13. Initializing FE Routing.
+14. Added HomeScreen component.
+15. implementing About Us page
