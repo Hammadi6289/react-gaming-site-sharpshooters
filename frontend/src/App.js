@@ -7,6 +7,8 @@ import COD from "./components/COD";
 import GameCenters from "./components/GameCenters";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
+import GamesList from "./components/GamesList";
+import GameDetail from "./components/GameDetail";
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/games" element={<GamesList />} />
             <Route path="/trending" element={<Trending />} />
             <Route path="/cod" element={<COD />} />
             <Route path="/game-centers" element={<GameCenters />} />
+            <Route exact path="/games/:slug" component={GameDetail} />
           </Routes>
         </div>
         <Footer />

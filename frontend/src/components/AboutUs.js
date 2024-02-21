@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 const AboutUs = () => {
   return (
@@ -12,43 +13,48 @@ const AboutUs = () => {
       ></div>
       <div className="container mx-auto px-4 py-8 mt-16">
         <h1 className="text-3xl font-bold text-center mb-8">About Us</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Our Mission</h2>
-            <p className="text-white-700 leading-relaxed">
-              At Sharpshooter Arena, our mission is to create an immersive
-              gaming experience for all players. We aim to provide a platform
-              where gamers of all levels can come together, compete, and
-              celebrate their passion for gaming.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Our Vision</h2>
-            <p className="text-white-700 leading-relaxed">
-              Our vision is to be the ultimate destination for gaming
-              enthusiasts worldwide. We strive to continually innovate,
-              introduce new features, and foster a vibrant community that shares
-              our love for gaming.
-            </p>
-          </div>
-        </div>
-        <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">Why Choose Us?</h2>
-          <ul className="list-disc list-inside text-white-700">
-            <li>State-of-the-art gaming facilities</li>
-            <li>Wide selection of games and tournaments</li>
-            <li>Friendly and inclusive gaming community</li>
-            <li>Regular events and competitions</li>
-            <li>Professional and dedicated staff</li>
-          </ul>
-        </div>
+        <Fade right>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-xl font-semibold mb-4">Our Mission</h2>
+              <p className="text-white-700 leading-relaxed">
+                At Sharpshooter Arena, our mission is to create an immersive
+                gaming experience for all players. We aim to provide a platform
+                where gamers of all levels can come together, compete, and
+                celebrate their passion for gaming.
+              </p>
+            </div>
 
-        <div
-          className="bg-cover bg-center h-96"
-          style={{
-            backgroundImage: `url(${require("../images/aboutusjpg.jpg")})`,
-          }}
-        ></div>
+            <div>
+              <h2 className="text-xl font-semibold mb-4">Our Vision</h2>
+              <p className="text-white-700 leading-relaxed">
+                Our vision is to be the ultimate destination for gaming
+                enthusiasts worldwide. We strive to continually innovate,
+                introduce new features, and foster a vibrant community that
+                shares our love for gaming.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h2 className="text-xl font-semibold mb-4">Why Choose Us?</h2>
+            <ul className="list-disc list-inside text-white-700">
+              <li>State-of-the-art gaming facilities</li>
+              <li>Wide selection of games and tournaments</li>
+              <li>Friendly and inclusive gaming community</li>
+              <li>Regular events and competitions</li>
+              <li>Professional and dedicated staff</li>
+            </ul>
+          </div>
+        </Fade>
+        <Fade bottom>
+          <div
+            className="bg-cover bg-center h-96"
+            style={{
+              backgroundImage: `url(${require("../images/aboutusjpg.jpg")})`,
+            }}
+          ></div>
+        </Fade>
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Check out our reviews!</h2>
           <div className="flex flex-wrap justify-between">

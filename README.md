@@ -1,8 +1,8 @@
-Sharpshooter Arena Central Website.
+# Sharpshooter Arena Central Website.
 
 1. Starting React application.
 2. install tailwind and configure tailwind.config.js.
-   2.1. install Post css language support extension.
+   1. install Post css language support extension.
 3. Download Imaes from web (WallpaperFlare ).
 4. Added Header component.
 5. Added Hero component.
@@ -16,3 +16,8 @@ Sharpshooter Arena Central Website.
 13. Initializing FE Routing.
 14. Added HomeScreen component.
 15. implementing About Us page
+16. Games we host (GameList.js)
+17. Create Nodejs server
+    17.1.create route for /api/games
+    17.2.return products
+18.
