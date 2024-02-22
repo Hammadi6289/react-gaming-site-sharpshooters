@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TrendingCard from "./TrendingCard";
 import Fade from "react-reveal/Fade";
 
@@ -9,9 +10,12 @@ const Trending = () => {
           <p className="text-[1.4rem] font-bold text-center ">
             Currently Trending Games
           </p>
-          <button className="bg-[#160E46] w-[7rem] py-3 text-sm rounded-lg">
+          <Link
+            to="/games"
+            className="bg-[#160E46] w-[7rem] py-3 text-sm rounded-lg block text-center"
+          >
             SEE ALL
-          </button>
+          </Link>
         </div>
       </Fade>
 

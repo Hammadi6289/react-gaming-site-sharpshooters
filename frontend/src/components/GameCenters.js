@@ -1,5 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 const GameCenters = () => {
   return (
@@ -47,9 +48,12 @@ const GameCenters = () => {
 
       <Fade bottom>
         <div className="w-full flex items-center justify-center my-[4rem] ">
-          <button className="bg-[#160E46] w-[7rem] py-3 text-sm rounded-lg">
+          <Link
+            to="/about"
+            className="bg-[#160E46] w-[7rem] py-3 text-sm rounded-lg block text-center"
+          >
             SEE ALL
-          </button>
+          </Link>
         </div>
       </Fade>
     </div>

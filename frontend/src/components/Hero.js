@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Fade } from "react-reveal";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,10 +28,12 @@ const Hero = () => {
             Immerse yourself in cutting-edge gaming technology and
             entertainment.
           </p>
-
-          <button className="text-sm w-[10rem] py-2 rounded-full bg-gradient-to-tr from-[#8A2BE2] to-[#FB9E3C]">
+          <Link
+            to="/games"
+            className="text-sm w-[10rem] py-2 rounded-full bg-gradient-to-tr from-[#8A2BE2] to-[#FB9E3C] text-center"
+          >
             Get more details
-          </button>
+          </Link>
         </div>
       </Fade>
 

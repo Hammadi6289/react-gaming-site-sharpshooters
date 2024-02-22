@@ -16,6 +16,8 @@ const GameDetail = () => {
   const navigate = useNavigate();
 
   const [game, setGame] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState("");
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -38,6 +40,10 @@ const GameDetail = () => {
 
   const handleImageClick = (index) => {
     setCurrentImageIndex(index);
+  };
+  const handleLocationChange = (e) => {
+    setSelectedLocation(e.target.value);
+    dispatch({ type: "SET_SELECTED_LOCATION", payload: e.target.value });
   };
 
   const onChangeDate = (newDate) => {
@@ -114,6 +120,24 @@ const GameDetail = () => {
             <p className="text-green-500">
               <strong>Pricing:</strong> {game.pricing}
             </p>
+          </div>
+          <div>
+            <select
+              className="mt-4 border border-black-500 rounded-md p-2 text-black bg-gradient-to-r from-purple-400 to-red-800 focus:outline-none focus:border-blue-500"
+              value={selectedLocation}
+              onChange={handleLocationChange}
+            >
+              <option value="">Select Gaming Zone location</option>
+              {game.locations.map((location, index) => (
+                <option
+                  key={index}
+                  value={location}
+                  className="bg-gradient-to-r from-gray-800 to-gray-900 text-black font-bold border border-black-500 rounded-md p-2 hover:bg-gray-700 transition-colors duration-300"
+                >
+                  {location}
+                </option>
+              ))}
+            </select>
           </div>
           <button
             className="bg-gradient-to-r from-purple-500 to-red-700 text-white px-4 py-2 rounded-md mt-4"

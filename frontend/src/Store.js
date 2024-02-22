@@ -6,6 +6,7 @@ const initialState = {
   cart: {
     cartItems: [],
   },
+  selectedLocation: "",
 };
 
 function reducer(state, action) {
@@ -21,6 +22,13 @@ function reducer(state, action) {
           )
         : [...state.cart.cartItems, newItem];
       return { ...state, cart: { ...state.cart, cartItems } };
+    case "SET_SELECTED_LOCATION":
+      // Handle setting selected location
+      return {
+        ...state,
+        selectedLocation: action.payload,
+      };
+
     default:
       return state;
   }
