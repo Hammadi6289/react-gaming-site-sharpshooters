@@ -1,6 +1,7 @@
 const data = {
   games: [
     {
+      _id: "1",
       name: "Call of Duty 1",
       slug: "cod1",
       category: "shooting",
@@ -19,8 +20,17 @@ const data = {
       playersAllowed: "Single player, Multiplayer",
       pricing: "$19.99",
       releaseDate: "October 29, 2003",
+
+      locations: [
+        "253 E JENNIE AVE APT B, HERMISTON Oregon",
+        "49-Mile Scenic Drive San Fransisco",
+        "4495 NW 73rd Ave Miami, Florida",
+        "291 W CHARLES L MCKAY ST , VAIL, Arizona",
+        "4994 S GOLD BUG WAY, AURORA, Colorado",
+      ],
     },
     {
+      _id: "2",
       name: "Call of Duty 4 Modern Warfare",
       slug: "codmw",
       category: "shooting",
@@ -40,8 +50,16 @@ const data = {
       playersAllowed: "Multiplayer",
       pricing: "$29.99",
       releaseDate: "November 5, 2007",
+      locations: [
+        "253 E JENNIE AVE APT B, HERMISTON Oregon",
+        "49-Mile Scenic Drive San Fransisco",
+        "4495 NW 73rd Ave Miami, Florida",
+        "291 W CHARLES L MCKAY ST , VAIL, Arizona",
+        "4994 S GOLD BUG WAY, AURORA, Colorado",
+      ],
     },
     {
+      _id: "3",
       name: "Call of Duty Black Ops 3",
       slug: "codblackops3",
       category: "shooting",
@@ -60,8 +78,16 @@ const data = {
       playersAllowed: "Single player, Multiplayer, Co-op",
       pricing: "$39.99",
       releaseDate: "November 6, 2015",
+      locations: [
+        "253 E JENNIE AVE APT B, HERMISTON Oregon",
+        "49-Mile Scenic Drive San Fransisco",
+        "4495 NW 73rd Ave Miami, Florida",
+        "291 W CHARLES L MCKAY ST , VAIL, Arizona",
+        "4994 S GOLD BUG WAY, AURORA, Colorado",
+      ],
     },
     {
+      _id: "4",
       name: "Call of Duty World War 2",
       slug: "codww2",
       category: "shooting",
@@ -81,8 +107,16 @@ const data = {
       playersAllowed: "Single player, Multiplayer, Co-op",
       pricing: "$49.99",
       releaseDate: "November 3, 2017",
+      locations: [
+        "253 E JENNIE AVE APT B, HERMISTON Oregon",
+        "49-Mile Scenic Drive San Fransisco",
+        "4495 NW 73rd Ave Miami, Florida",
+        "291 W CHARLES L MCKAY ST , VAIL, Arizona",
+        "4994 S GOLD BUG WAY, AURORA, Colorado",
+      ],
     },
     {
+      _id: "5",
       name: "PUBG",
       slug: "pubg",
       category: "shooting",
@@ -103,6 +137,13 @@ const data = {
       playersAllowed: "Multiplayer",
       pricing: "Free to play",
       releaseDate: "December 20, 2017",
+      locations: [
+        "253 E JENNIE AVE APT B, HERMISTON Oregon",
+        "49-Mile Scenic Drive San Fransisco",
+        "4495 NW 73rd Ave Miami, Florida",
+        "291 W CHARLES L MCKAY ST , VAIL, Arizona",
+        "4994 S GOLD BUG WAY, AURORA, Colorado",
+      ],
     },
   ],
 };

@@ -25,4 +25,7 @@
     18.2. Create 2 columns, {4} image and {8} details.
     18.3.
 19. Loading Box(Spinner) and Message Box.
-20. useContext Store Provider
+20. useContext Store Provider.
+    20.1. Implement add reservation click handler.
+21. Complete Add to cart
+22. Reservation Screen UI Part

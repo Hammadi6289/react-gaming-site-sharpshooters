@@ -11,6 +11,7 @@ import COD from "./components/COD";
 import GameCenters from "./components/GameCenters";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ReservationScreen from "./components/ReservationScreen";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/games" element={<GamesList />} />
+            <Route path="/cart" element={<ReservationScreen />} />
             <Route path="/games/:slug" element={<GameDetail />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/trending" element={<Trending />} />

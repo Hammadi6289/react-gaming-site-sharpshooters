@@ -18,6 +18,16 @@ app.get("/api/games/:slug", (req, res) => {
   }
 });
 
+app.get("/api/game/:id", (req, res) => {
+  const game = data.games.find((x) => x._id === req.params.id);
+
+  if (game) {
+    res.send(game);
+  } else {
+    res.status(404).send({ message: "Game not found" });
+  }
+});
+
 const port = process.env.PORT || 7000;
 
 app.listen(port, () => {

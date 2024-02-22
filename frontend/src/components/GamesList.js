@@ -99,7 +99,7 @@ const GamesList = () => {
               <div className="m-4">
                 <Link
                   to={`/games/${game.slug}`}
-                  className="text-white p-2 flex justify-center rounded-md bg-gradient-to-r from-purple-500 to-red-500"
+                  className="text-white p-2 flex justify-center rounded-md bg-gradient-to-r from-purple-500 to-red-700"
                 >
                   Details
                 </Link>
