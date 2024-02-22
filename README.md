@@ -20,4 +20,9 @@
 17. Create Nodejs server
     17.1.create route for /api/games
     17.2.return products
-18.
+18. Create Gamesdetail.js screen.
+    18.1. Fetch data from the backend.
+    18.2. Create 2 columns, {4} image and {8} details.
+    18.3.
+19. Loading Box(Spinner) and Message Box.
+20. useContext Store Provider

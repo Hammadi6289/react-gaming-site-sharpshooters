@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Fade from "react-reveal/Fade";
 
 const AboutUs = () => {
@@ -12,6 +13,9 @@ const AboutUs = () => {
         style={{ backgroundImage: `url(${require("../images/cod1.jpg")})` }}
       ></div>
       <div className="container mx-auto px-4 py-8 mt-16">
+        <Helmet>
+          <title>About Us</title>
+        </Helmet>
         <h1 className="text-3xl font-bold text-center mb-8">About Us</h1>
         <Fade right>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

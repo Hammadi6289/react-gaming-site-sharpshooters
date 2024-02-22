@@ -4,12 +4,22 @@ import data from "./data.js";
 const app = express();
 
 app.get("/api/games", (req, res) => {
-  // Corrected the route path
   res.send(data.games);
 });
 
-const port = process.env.PORT || 5000;
+// Route to handle requests for specific game details based on slug
+app.get("/api/games/:slug", (req, res) => {
+  const { slug } = req.params;
+  const game = data.games.find((game) => game.slug === slug);
+  if (game) {
+    res.send(game);
+  } else {
+    res.status(404).send({ message: "Game not found" });
+  }
+});
+
+const port = process.env.PORT || 7000;
 
 app.listen(port, () => {
-  console.log(`serve at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });

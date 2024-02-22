@@ -1,17 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import data from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 import Fade from "react-reveal/Fade";
+import { Helmet } from "react-helmet-async";
 
 const GamesList = () => {
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchGames = async () => {
+      try {
+        const response = await axios.get("/api/games");
+        setGames(response.data);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchGames();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <div className="container mx-auto px-4">
       {/* Hero Section */}
+
       <Fade right>
         <div className="hero-section bg-gray-950 text-white py-20 mb-6">
           <div className="text-center">
+            <Helmet>
+              <title>Games we offer</title>
+            </Helmet>
             <h1 className="text-4xl font-bold mb-4">Discover Our Games</h1>
             <p className="text-xl">Explore the most exciting games we host.</p>
           </div>
@@ -19,11 +46,11 @@ const GamesList = () => {
       </Fade>
 
       <h2 className="text-4xl text-[#e87d0e] font-medium">
-        Games that we are Hosting Currently
+        Games that we are Currently Hosting...
       </h2>
       <Fade bottom>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.games.map((game) => (
+          {games.map((game) => (
             <div
               key={game.slug}
               className="card bg-gray rounded-lg overflow-hidden shadow-lg"
@@ -33,8 +60,8 @@ const GamesList = () => {
                   <img
                     src={game.image}
                     alt={game.name}
-                    className="w-full h-84 object-contain mx-auto hover:animate-pulse cursor-pointer" // Adjusted for aspect ratio and centered //className="mt-[2rem] hover:animate-pulse cursor-pointer "
-                    style={{ maxHeight: "100%", maxWidth: "100%" }} // Ensures image is contained within dimensions
+                    className="w-full h-74 object-contain mx-auto hover:animate-pulse cursor-pointer" // Adjusted for aspect ratio and centered //className="mt-[2rem] hover:animate-pulse cursor-pointer "
+                    style={{ maxHeight: "90%", maxWidth: "90%" }} // Ensures image is contained within dimensions
                   />
                 </Link>
               </div>
@@ -64,7 +91,7 @@ const GamesList = () => {
                 </span>
                 <span
                   className="block text-gray-500 text-sm overflow-hidden overflow-ellipsis"
-                  style={{ maxHeight: "5rem" }}
+                  style={{ maxHeight: "3rem" }}
                 >
                   {game.description}
                 </span>
